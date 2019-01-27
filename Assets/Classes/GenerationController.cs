@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class GenerationController : MonoBehaviour
 {
     public List<GameObject> tilemaps;
-    public GameObject tilemapClone;
+    public GameObject[] tilemapClones;
 
     private void Start()
     {
@@ -37,14 +37,14 @@ public class GenerationController : MonoBehaviour
         float y = tilemaps[index].transform.position.y;
 
         if(index > 0) {
-            x += 8.83f;
+            x += 8.41f;
             y += 4.35f;
         } else {
-            x += -8.83f;
+            x += -8.41f;
             y += -4.35f;
         }
 
-        GameObject tilemap = Instantiate(tilemapClone, new Vector3(x, y, 0.0f), Quaternion.identity);
+        GameObject tilemap = Instantiate(tilemapClones[Random.Range(0, tilemapClones.Length)], new Vector3(x, y, 0.0f), Quaternion.identity);
         tilemaps.Insert(index, tilemap);
     }
 

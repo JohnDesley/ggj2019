@@ -10,8 +10,6 @@ public class CurrencyController : MonoBehaviour
 
     private bool isInteractable = false;
 
-    public GameObject interactPop;
-
     private GameObject player;
     private PlayerInventory playerInventory;
 
@@ -33,7 +31,6 @@ public class CurrencyController : MonoBehaviour
     private void setInteractable(bool interactable)
     {
         isInteractable = interactable;
-        interactPop.GetComponent<Renderer>().enabled = interactable;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -25,7 +25,7 @@ public class SkillController : MonoBehaviour
     private void Update()
     {
         if(isInteractable && Input.GetKeyUp(KeyCode.E) && playerSkills != null) {
-            playerSkills.setSkill(skill);
+            playerSkills.setKnowledge(1);
         }
     }
 
