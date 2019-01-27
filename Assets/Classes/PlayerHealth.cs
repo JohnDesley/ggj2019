@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        if (depression >= 300 && !hasLost)
+        if (depression >= 100 && !hasLost)
         {
             loseText.text = "TOO DEPRESSED TO CARE";
             hasLost = true;
